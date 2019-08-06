@@ -23,6 +23,7 @@
                   <%=  attachment_image_tag post_image, :image %>
                   <!-- post_image.shop_name -->
                   <% end %>
+                  <%= paginate @post_images, class: "paginate" %>
                 </h3>
                 <p><%= post_image.caption %></p>
                 <ul class="inline-meta">
