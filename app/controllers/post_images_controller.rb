@@ -26,7 +26,7 @@ end
 def destroy
 	@post_image = PostImage.find(params[:id])
 	@post_image.destroy
-	redirecto_to post_images_path
+	redirect_to post_images_path
 end
 
 private
