@@ -7,7 +7,6 @@
            <% @post_images.each do |post_image| %>
             <div class="masonry-block">
              <div class="block block-image v1">
-
               <div class="block-image">
                 <div class="view view-first">
                   <a href="">
@@ -20,11 +19,9 @@
                 <%= image_tag('sample-author1.jpg', class: "img-circle pull-left profile-thumb") %>
                 <h3 class="block-title">
                   <%= link_to post_image_path(post_image.id) do %>
-                  <%=  attachment_image_tag post_image, :image %>
-                  <!-- post_image.shop_name -->
+                  <%= post_image.shop_name %>
                   <% end %>
-                  <%= paginate @post_images, class: "paginate" %>
-                </h3>
+               </h3>
                 <p><%= post_image.caption %></p>
                 <ul class="inline-meta">
                   <li>By
@@ -38,6 +35,7 @@
             </div>
           </div>
          <% end %>
+        <%= paginate @post_images, class: "pagenate" %>
         </div>
       </div>
     </div>
